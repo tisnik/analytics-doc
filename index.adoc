@@ -1,0 +1,11 @@
+Fabric8 Analytics
+========================================
+:icons: font
+Pavel Tišnovský <ptisnovs@redhat.com>
+v1.0, 2018-10-18
+
+link:user_guide/index.html[User Guide]
+link:rest_api_guide/index.html[REST API Guide]
+link:architecture_guide/index.html[Architecture Guide]
+link:deployment_guide/index.html[Deployment Guide]
+link:developers_guide/index.html[Developer's Guide]
