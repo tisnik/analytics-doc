@@ -6,5 +6,5 @@ v1.0, 2018-10-18
 
 == API Documentation
 
-- link:../../../../user_guide/fabric8-analytics-jobs%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-jobs]
+- link:../../../../fabric8-analytics-jobs%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-jobs]
 
