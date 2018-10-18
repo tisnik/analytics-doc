@@ -8,26 +8,3 @@ v1.0, 2018-10-18
 
 - link:../../../../user_guide/fabric8-analytics-jobs%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-jobs]
 
-== REST API Guide
-
-A guide to using the Analytics State Transfer (REST) API.
-
-link:rest_api_guide/index.html[Read guide]
-
-== Architecture Guide
-
-Analytics service architecture.
-
-link:architecture_guide/index.html[Read guide]
-
-== Deployment Guide
-
-Installing, configuring, and provisioning analytics service.
-
-link:deployment_guide/index.html[Read guide]
-
-== Developer's Guide
-
-Document focused to developers.
-
-link:developers_guide/index.html[Read guide]
