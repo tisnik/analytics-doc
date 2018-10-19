@@ -1,0 +1,53 @@
+= Fabric8 Analytics REST API Guide
+
+:icons: font
+Pavel Tišnovský <ptisnovs@redhat.com>
+v1.0, 2018-10-18
+
+== Introduction to Analytics API
+
+=== The Analytics API
+
+Analytics services provide a Representational State Transfer (REST) API. The REST API is useful for developers and administrators who aim to integrate the functionality of Aanalytics services with custom scripts or external applications that access the API over HTTP or HTTPS.
+
+The benefits of the REST API are:
+
+- Broad client support: Any programming language, framework, or system with support for HTTP protocol can use the API;
+
+- Self descriptive: Client applications require minimal knowledge of the Red Hat Satellite infrastructure as many details are discovered at runtime;
+
+- Resource based model: The resource based REST model provides a natural way to manage a virtualization platform. 
+
+This provides developers and administrators the ability to:
+
+- Integrate with enterprise IT systems;
+- Integrate with third-party applications;
+- Perform automated maintenance or error checking tasks;
+- Automate repetitive tasks with scripts.
+
+
+=== Representational State Transfer
+
+Representational State Transfer (REST) is a software design architecture that focuses on resources for a specific service and their representations. A resource representation is a key abstraction of information that corresponds to one specific managed element on a server. A client sends a request to a server element located at a Uniform Resource Identifier (URI) and performs operations with standard HTTP methods, such as `GET`, `POST`, `PUT`, and `DELETE`. This provides a stateless communication between the client and server where each request acts independent of any other request and contains all necessary information to complete the request.
+
+
+== API Reference
+
+=== Understanding the API Syntax
+
+=== Understanding the JSON Response Format
+
+Calls to the API using GET will return results in JSON format. Passing the output through the Python `json.tool` module gives a more human readable format.
+
+==== JSON Response Format for Collections
+
+==== JSON Response Format for Single Objects
+
+=== Stack analysis API
+
+=== License analysis API
+
+=== Package vulnerabilities API
+
+== Authenticating API Calls
+
