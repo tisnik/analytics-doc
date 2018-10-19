@@ -1,0 +1,40 @@
+= Fabric8 Analytics Architecture Guide
+
+:icons: font
+Pavel Tišnovský <ptisnovs@redhat.com>
+v1.0, 2018-10-18
+
+== Architecture Guide
+
+(just an example taken from my older documentation)
+
+[ditaa]
+------------------------------------------------------------------------
+
+              /-----------------\
+              | Stage Dashboard |
+              | cGRE            |
+              \-----------------/
+                   |
+                   | start selected job(s)
+                   |                            +----------+
+                   | (book=3 jobs)              |{d}       |
+                   |                       +--->|Preview   |
+                   |                       |    |          |
+                   |                       |    +----------+
+                   |                       |
+                   v                       |
++------+      +-------+       +-------+    |    +----------+
+|{d}   |clone |Jenkins| calls |ccutil |----+    |{d}       |
+|GitLab|----->|       |------>|       |-------->|Stage     |
+|repo  |      |       |       |       |----+    |          |
++------+      +-------+       +-------+    |    +----------+
+                  |                        |
+                  v                        |
+              +-------+                    |    +----------+
+              |{s}    |                    |    |{d}       |
+              |local  |                    +--->|Production|
+              |clone  |                         |          |
+              +-------+                         +----------+
+
+------------------------------------------------------------------------
