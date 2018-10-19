@@ -1,5 +1,4 @@
 = Fabric8 Analytics Developer's Guide
-
 :icons: font
 Pavel Tišnovský <ptisnovs@redhat.com>
 v1.0, 2018-10-18
@@ -59,15 +58,15 @@ git push origin bug/my-fix-branch
 * When opening a pull request, select the `master` branch as a base.
 * Mark your pull request with **[WIP]** (Work In Progress) to get feedback but prevent merging (e.g. [WIP] Update CONTRIBUTING.md)
 * If we suggest changes then:
-  * Make the required updates
-  * Push changes to git (this will update your Pull Request):
-    * You can add new commit
-    * Or rebase your branch and force push to your Github repository:
+** Make the required updates
+** Push changes to git (this will update your Pull Request):
+** * You can add new commit
+** * Or rebase your branch and force push to your Github repository:
 
-    ----
-    git rebase -i master
-    git push -f origin bug/my-fix-branch
-    ----
+----
+git rebase -i master
+git push -f origin bug/my-fix-branch
+----
 
 That's it! Thank you for your contribution!
 
@@ -84,6 +83,19 @@ That's it! Thank you for your contribution!
 * Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
 * Reference issues and pull requests liberally
 
+== Implementation details
+
+=== API
+
+* Use hyphenation over underscore or camelCase (i.e. `/my-awesome-endpoint`)
+* Provide extensive examples for input and output
+* Payload transferred over API should be in JSON format (exceptions are possible - for example while transferring files) and has to be documented with http://json-schema.org/[JSON Schema] and https://jsl.readthedocs.io/en/latest/tutorial.html[JSL], see existing schemas for https://github.com/fabric8-analytics/fabric8-analytics-worker/tree/master/cucoslib/workers/schemas/[workers] and https://github.com/fabric8-analytics/fabric8-analytics-server/tree/master/bayesian/schemas[server]
+
+=== Language
+
+* Use Python 3 where possible with potential exceptions:
+** Ecosystem (Node.js, Ruby...) specific features which require parsing of the non-Python code
+** Specific use case where Python does not provide needed functionality, library, framework... - needs strong justification and approval from tech leads
 
 == Continuous Integration
 
