@@ -10,3 +10,9 @@ v1.0, 2018-10-18
 - link:../../../../fabric8-analytics-notification-scheduler%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-notification-scheduler]
 - link:../../../../fabric8-analytics-stack-analysis%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-stack-analysis]
 - link:../../../../fabric8-analytics-jobs%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-jobs]
+
+== Contributing
+
+== Continuous Integration
+
+== Coding standards
