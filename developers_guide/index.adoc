@@ -112,6 +112,14 @@ The following tests can be run to test your code in Fabric8-Analytics. Detailed 
 * Database integrity tests: Database integrity tests are described in the https://github.com/fabric8-analytics/fabric8-analytics-common/blob/master/db-integrity-tests/database_integrity_tests.adoc[database_integrity_tests].
 
 
+== QA and testing
+
+=== Actual status
+
+=== Test plans
+
+=== Useful links
+
 == Coding standards
 
 Use the following scripts to check if the code follows  https://www.python.org/dev/peps/pep-0008/[PEP8] and  https://www.python.org/dev/peps/pep-0257/[PEP257] coding standards. These scripts can be run without any arguments:
