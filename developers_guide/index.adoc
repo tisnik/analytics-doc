@@ -11,6 +11,8 @@ include::chapters/implementation_details.adoc[]
 
 include::chapters/ci.adoc[]
 
+include::chapters/testing.adoc[]
+
 include::chapters/qa.adoc[]
 
 include::chapters/coding_standards.adoc[]
