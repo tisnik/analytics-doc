@@ -1,0 +1,14 @@
+== Implementation details
+
+=== API
+
+* Use hyphenation over underscore or camelCase (i.e. `/my-awesome-endpoint`)
+* Provide extensive examples for input and output
+* Payload transferred over API should be in JSON format (exceptions are possible - for example while transferring files) and has to be documented with http://json-schema.org/[JSON Schema] and https://jsl.readthedocs.io/en/latest/tutorial.html[JSL], see existing schemas for https://github.com/fabric8-analytics/fabric8-analytics-worker/tree/master/f8a_worker/workers/schemas[workers] and https://github.com/fabric8-analytics/fabric8-analytics-server/tree/master/bayesian/schemas[server]
+
+
+=== Language
+
+* Use Python 3 where possible with potential exceptions:
+** Ecosystem (Node.js, Ruby...) specific features which require parsing of the non-Python code
+** Specific use case where Python does not provide needed functionality, library, framework... - needs strong justification and approval from tech leads
