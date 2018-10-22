@@ -31,13 +31,61 @@ This provides developers and administrators the ability to:
 Representational State Transfer (REST) is a software design architecture that focuses on resources for a specific service and their representations. A resource representation is a key abstraction of information that corresponds to one specific managed element on a server. A client sends a request to a server element located at a Uniform Resource Identifier (URI) and performs operations with standard HTTP methods, such as `GET`, `POST`, `PUT`, and `DELETE`. This provides a stateless communication between the client and server where each request acts independent of any other request and contains all necessary information to complete the request.
 
 
+
 == API Reference
 
 === Understanding the API Syntax
 
+The built-in API reference shows the API route, or path, preceded by an HTTP verb:
+
+----
+HTTP_VERB API_ROUTE
+----
+
+The HTTP verbs used by the Analytics API are `GET`, `POST`, `PUT`, `DELETE` and `PATCH`. If you are already familiar with API syntax and the `curl` command you can skip this section.
+To work with the API, construct a command using the API route from the reference document and the command syntax from the documentation for the command. For example, the `curl` manual page show the following basic syntax:
+
+----
+curl [options] [URL...]
+----
+
+The options used in this guide include: `-X`, `--request command`, where `command` is an HTTP verb.
+
+==== The GET HTTP Verb
+
+The GET HTTP verb is used to get data from the API about an existing entry or resource.
+
+Calls to the API using GET will return results in JSON format. Passing the output through the Python `json.tool` module gives a more human readable format. Please note, that according to the design of the HTTP specification, GET (along with HEAD) requests are used only to read data and not change it. Therefore, when used this way, they can be considered safe - nothing should be changed on service side.
+
+
+
+==== The POST HTTP Verb
+
+The POST HTTP verb is used to submit data to the API to create a new entry or resource. The data must be in JSON format, and can be included inline using the `-d`, `--data` option followed by the quoted JSON formatted data enclosed in braces {}. Alternatively, the unquoted JSON formatted data can be enclosed in a file, and specified using the curl command's `@` option. For example, `-d @input_file.json`.
+
+
+
 === Understanding the JSON Response Format
 
-Calls to the API using GET will return results in JSON format. Passing the output through the Python `json.tool` module gives a more human readable format.
+The advantages of using external files for JSON formatted data include less problems with quoting and escaping, being able to use your favorite editor with syntax checkers to help you find and avoid mistakes, and external tools to check the validity of JSON data or to reformat it. For example, the yajl package contains the json_verify tool and the json_reformat tool.
+Using the json_verify tool, you can check the validity of a JSON file as follows:
+
+$ json_verify < test_file.json
+
+The unstructured JSON data returned by an API call can be piped through the python module json.tool:
+
+curl API_call | python -m json.tool
+
+Alternately, use the json_reformat tool:
+
+curl API_call | json_reformat
+
+The output format is explained in Section 2.2, “Understanding the JSON Response Format”.
+
+----
+curl -X GET https://service-address/api/v1
+----
+
 
 ==== JSON Response Format for Collections
 
@@ -45,9 +93,17 @@ Calls to the API using GET will return results in JSON format. Passing the outpu
 
 === Stack analysis API
 
+==== Code examples
+
 === License analysis API
+
+==== Code examples
 
 === Package vulnerabilities API
 
+==== Code examples
+
 == Authenticating API Calls
+
+==== Code examples
 
