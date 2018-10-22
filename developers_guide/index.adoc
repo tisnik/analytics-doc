@@ -116,9 +116,170 @@ The following tests can be run to test your code in Fabric8-Analytics. Detailed 
 
 === Actual status
 
+==== Integration tests
+
+Priority: *high*
+
+Integration tests are part of the https://github.com/fabric8-analytics/fabric8-analytics-common[fabric8-analytics-common] repository
+
+They are based on the http://pythonhosted.org/behave/[Behave] project
+
+===== Documentation
+
+* Documentation is part of the https://github.com/fabric8-analytics/fabric8-analytics-common[fabric8-analytics-common] repository, see
+ https://github.com/fabric8-analytics/fabric8-analytics-common/blob/master/integration-tests/README.md[README.md]
+* Contains outdated informations
+* Needs to be updated
+* Test steps description are now generated and presented on page https://fabric8-analytics.github.io/common.html[fabric8-analytics.github.io]
+
+===== Issues/TODO
+
+
+===== Blockers
+
+
+===== Done
+
+==== End-to-end tests
+
+Priority: *high*
+
+===== Documentation
+POC for EE tests : https://github.com/naina-verma/poc-tests-analytics/blob/master/README.md
+All EE tests should go to: https://github.com/fabric8io/fabric8-test
+
+===== Issues/TODO
+
+===== Blockers
+Due to Build pipeline cannot proceed with automating UI stack reports.
+
+
+==== Unit tests
+
+Priority: *normal*
+
+Unit tests are part of sources for all components
+
+===== Documentation
+
+N/A (see Issues below)
+
+===== Issues/TODO
+
+
+===== Blockers
+
+==== Performance tests
+
+Priority: *normal*
+
+* Performance tests are run against Core server (almighty-core)
+* Performance tests are run against Jobs server (flow-analysis and so)
+* CRUD tests for workitems
+* Contact information: Pavel Macik
+
+===== Test results
+
+* https://github.com/fabric8-analytics/fabric8-analytics.github.io/tree/master/perf-tests
+
+===== Documentation
+
+===== Issues/TODO
+
+===== Blockers
+
+
+==== Code quality tests
+
+
+===== Documentation
+
+===== Issues/TODO
+
+
+===== Blockers
+
+==== Regression tests
+
+Priority: *low*
+
+N/A at this moment
+
+===== Documentation
+
+N/A
+
+===== Issues/TODO
+
+* TBD
+
+===== Blockers
+
+* TBD
+
+
+=== Test plans
+
+==== Overall
+
+Move this document from wiki to the new repo? *fabric8-qa* or something like this?
+
+
+==== End-to-end tests
+
+* [&times;] Make sure that all tests are on https://github.com/fabric8io/fabric8-test
+* [&times;] Dockerize the tests
+* [&times;] Further cooperate with Leonard Dimaggio on plans for EE tests
+* [&times;] Specify test scenarios
+
+==== Integration tests
+
+* [&#x2713;] Provide documentation of test steps
+* [-] Display link to test results
+* [-] Cooperate with devels to update API documentation
+* [&#x2713;] Update https://github.com/fabric8-analytics/fabric8-analytics-common/blob/master/integration-tests/README.md
+* [&#x2713;] Create smoketests
+* [-] Create tests for all https://raw.githubusercontent.com/fabric8-analytics/fabric8-analytics.github.io/master/server-api.txt[server API calls]
+* [-] Create tests for all https://raw.githubusercontent.com/fabric8-analytics/fabric8-analytics.github.io/master/jobs-api.txt[jobs API calls]
+* [&times;] Create API test coverage report
+
+==== Unit tests
+
+* [-] Cooperate with devels to integrate tests into MR workflow
+* [?] Possibly use GIT hooks for this task
+* [-] https://github.com/fabric8-analytics/fabric8-analytics-server/issues/28
+* [-] https://github.com/fabric8-analytics/fabric8-analytics-server/issues/29
+
+==== Performance tests
+
+* [-] Cooperate with Pavel Macik who is responsible for perftests for all components
+* [-] Define stories for perftests for analytics modules
+
+==== Code quality tests
+
+* [-] The process needs to be refined
+* [-] https://github.com/fabric8-analytics/fabric8-analytics-server/issues/30
+* [-] Cooperate with devels to integrate tests into MR workflow
+* [?] Possibly use GIT hooks for this task
+
+==== Regression tests
+
+* [-] Define the process
+* [-] Cooperate with devels to follow the process
+* [-] Update/create Jenkins jobs to perform regression tests
+
+
 === Test plans
 
 === Useful links
+
+* http://pythontesting.net/start-here/[Introductions to Python Testing Frameworks]
+* http://pythonhosted.org/behave/[Behave framework]
+* https://docs.python.org/3.3/library/unittest.html#[unittest — Unit testing framework]
+* http://docs.python-requests.org/en/master/[Requests: HTTP for Humans]
+* https://en.wikipedia.org/wiki/Regression_testing[Regression testing]
+* https://github.com/pmacik/ldimaggi-perfcake[Red Hat Developer Performance Tests]
+
 
 == Coding standards
 
