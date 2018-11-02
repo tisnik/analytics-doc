@@ -7,7 +7,6 @@
 - link:../../../../fabric8-gemini-server%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-gemini-server]
 - link:../../../../f8a-hpf-insights%20(doc)/lastSuccessfulBuild/artifact/html/index.html[f8a-hpf-insights]
 - link:../../../../f8a-server-backbone%20(doc)/lastSuccessfulBuild/artifact/html/index.html[f8a-server-backbone]
-- link:../../../../fabric8-analytics%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics]
 - link:../../../../fabric8-analytics-api-gateway%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-api-gateway]
 - link:../../../../fabric8-analytics-auth%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-auth]
 - link:../../../../fabric8-analytics-common%20(doc)/lastSuccessfulBuild/artifact/html/index.html[fabric8-analytics-common]
